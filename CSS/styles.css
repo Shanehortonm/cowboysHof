@@ -16,8 +16,6 @@ body {
     box-sizing: inherit;
 }
 
-
-
 /*
 ==========================================================================
     Main panels
@@ -102,20 +100,26 @@ body {
     transform: translateY(0);
 }
 
-.panel p {
+.panel h1 {
     text-transform: uppercase;
     font-family: 'Quicksand''Times New Roman', Times, serif;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
     font-size: 2rem;
 }
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Quicksand''Times New Roman', Times, serif;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 1.2rem;
+}
 
 .panel p:nth-child(3) {
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .panel.open {
     flex: 5;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .cta {
