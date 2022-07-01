@@ -43,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
 }
 /*
 ===================================================================
@@ -51,23 +51,23 @@ body {
 ===================================================================
 */
 .panel1 {
-    background-image: url(/img/boblilly.jpg);
+    background-image: url(https://a.espncdn.com/photo/2011/0126/dal_sbteam15_800.jpg);
 }
 
 .panel2 {
-    background-image: url(/img/rogerstaubach.jpg);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f5/Staubach_cowboys_qb.jpg);
 }
 
 .panel3 {
-    background-image: url(/img/emmittsmith.jpg);
+    background-image: url(https://cdn.britannica.com/86/197086-050-7FEFA7A6/Emmitt-Smith.jpg);
 }
 
 .panel4 {
-    background-image: url(/img/irvin.jpg);
+    background-image: url(https://i.pinimg.com/originals/b6/a0/75/b6a0755825829a73d8319b6d5a9088c1.jpg);
 }
 
 .panel5 {
-    background-image: url(/img/larryallen.jpg);
+    background-image: url(https://a.espncdn.com/photo/2011/1103/dal_g_allen_b1_300.jpg);
 }
 
 
@@ -100,21 +100,8 @@ body {
     transform: translateY(0);
 }
 
-.panel h1 {
-    text-transform: uppercase;
-    font-family: 'Quicksand''Times New Roman', Times, serif;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-    font-size: 2rem;
-}
-.panel p {
-    text-transform: uppercase;
-    font-family: 'Quicksand''Times New Roman', Times, serif;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-    font-size: 1.2rem;
-}
-
 .panel p:nth-child(3) {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 .panel.open {
@@ -126,3 +113,45 @@ body {
     color: white;
     text-decoration: none;
 }
+
+/*
+======================================================================================
+    Styling for Informational text on players
+======================================================================================
+*/
+
+.panel h1 {
+    text-transform: uppercase;
+    font-family: 'Quicksand''Times New Roman', Times, serif;
+    text-shadow: 0 5px 4px rgba(0, 0, 0, 0.72), 0 5px 14px rgba(0, 0, 0, 0.45);
+    font-size: 2rem;
+}
+.panel h1 {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Quicksand''Times New Roman', Times, serif;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/*
+============================================================================================
+    Hover effect on H1. Looked into using background clips, to create a new sliding effect
+============================================================================================
+*/
+
+.panel h1 {
+    background:
+      linear-gradient(-85deg, #000  40%, #fff 0 60%, #000  0) right/300% 100% no-repeat,
+      linear-gradient(-85deg, #0000 40%, #000 0 60%, #0000 0) right/300% 100% no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+  }
+.panel h1:hover {
+    background-position: left;
+    transition: 0.8s
+  }
