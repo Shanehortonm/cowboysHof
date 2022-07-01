@@ -16,6 +16,14 @@ body {
     box-sizing: inherit;
 }
 
+
+
+/*
+==========================================================================
+    Main panels
+==========================================================================
+*/
+
 .panels {
     min-height: 100vh;
     overflow: hidden;
@@ -32,13 +40,18 @@ body {
                 flex 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11), background 0.2s;
     font-size: 20px;
     background-size: cover;
+    background-position: center;
     flex: 1;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;  
 }
-
+/*
+===================================================================
+    Back ground Images
+===================================================================
+*/
 .panel1 {
     background-image: url(/img/boblilly.jpg);
 }
@@ -59,6 +72,13 @@ body {
     background-image: url(/img/larryallen.jpg);
 }
 
+
+/*
+================================================================================================
+    Creating Transform effect for Words
+================================================================================================
+*/
+
 .panel > * {
     margin: 0;
     width: 100%;
@@ -75,4 +95,30 @@ body {
 
 .panel > *:last-child {
     transform: translateY(100%);
+}
+
+.panel.open-active > *:first-child,
+.panel.open-active > *:last-child {
+    transform: translateY(0);
+}
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Quicksand''Times New Roman', Times, serif;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2rem;
+}
+
+.panel p:nth-child(3) {
+    font-size: 4rem;
+}
+
+.panel.open {
+    flex: 5;
+    font-size: 40px;
+}
+
+.cta {
+    color: white;
+    text-decoration: none;
 }
